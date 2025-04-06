@@ -1,0 +1,42 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Vercel or any deployment cache
+.vercel/
+
+# Virtual environment
+venv/
+env/
+*.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE configurations (for example, VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Flask instance folder (if using Flask)
+instance/
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Credentials files
+credentials.json
+
+# Other unnecessary files
+*.swp
+.DS_Store
