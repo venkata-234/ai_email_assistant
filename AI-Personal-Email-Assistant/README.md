@@ -3,7 +3,7 @@ title: AI Personal Email Assistant
 emoji: 📉
 colorFrom: red
 colorTo: gray
-sdk: gradio
+sdk: flask
 sdk_version: 5.23.3
 app_file: app.py
 pinned: false
