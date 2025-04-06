@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify
 from auth import authenticate_google, authenticate_slack
 from email_fetcher import fetch_emails
@@ -13,10 +14,11 @@ def process_and_reply():
     emails = fetch_emails(google_service)
     if not emails:
         return jsonify({"message": "No new emails found."})
-    email_content = emails[0]['snippet']  
+    email_content = emails[0]['snippet']  # Simplified for demo purposes
     reply = generate_reply(email_content)
     send_email(google_service, reply, emails[0]['payload']['headers'][0]['value'])
     send_to_slack(slack_client, "#general", reply)
+
     return jsonify({"message": "Replied to the email and sent a notification to Slack."})
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=3000)  
